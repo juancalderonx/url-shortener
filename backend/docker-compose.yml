@@ -72,6 +72,11 @@ services:
       - '3306:3306'
     volumes:
       - db_data:/var/lib/mysql
+    command: >
+      bash -c "
+      echo \"GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'%' WITH GRANT OPTION; FLUSH PRIVILEGES;\" > /docker-entrypoint-initdb.d/init.sql;
+      exec docker-entrypoint.sh mysqld;
+      "
 
 volumes:
   db_data:

@@ -1,6 +1,7 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 
+import { DatabaseModule } from "@/app/config/database/database.module";
 import { HealthModule } from "@/app/http-api/health/health.module";
 import { ResponseNormalizerModule } from "@/app/http-api/response-normalizer/response.normalizer.module";
 
@@ -14,6 +15,7 @@ import { YourContextModule } from "@/contexts/your-context/infrastructure/your-c
     LoggerModule,
     HealthModule,
     ResponseNormalizerModule,
+    DatabaseModule,
     YourContextModule,
   ],
 })
