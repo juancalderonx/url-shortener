@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c5b690b-5da6-4338-927f-7c5c9bf91f9d" name="Changes" comment="" />
+    <list default="true" id="4c5b690b-5da6-4338-927f-7c5c9bf91f9d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +39,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/juanc/OneDrive/Documentos/Work/Opportunities/fitco/url-shortener/backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -69,7 +72,7 @@
       <updated>1730248161459</updated>
       <workItem from="1730248162732" duration="9000" />
       <workItem from="1730248189004" duration="1926000" />
-      <workItem from="1730250487593" duration="308000" />
+      <workItem from="1730250487593" duration="2114000" />
     </task>
     <servers />
   </component>
