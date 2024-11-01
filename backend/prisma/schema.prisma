@@ -8,11 +8,11 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
+  id        String    @id @default(uuid())
+  email     String    @unique
   password  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
 
   tokens Token[]
   Urls   Url[]
@@ -28,15 +28,15 @@ model Token {
 }
 
 model Url {
-  id          String   @id @default(uuid())
+  id          String    @id @default(uuid())
   originalUrl String
-  shortUrl    String   @unique
+  shortUrl    String    @unique
   userId      String
-  User        User     @relation(fields: [userId], references: [id])
-  clickCount  Int      @default(0)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  expiresAt   DateTime
+  User        User      @relation(fields: [userId], references: [id])
+  clickCount  Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime? @updatedAt
+  expiresAt   DateTime?
 
   Clicks Click[]
 }

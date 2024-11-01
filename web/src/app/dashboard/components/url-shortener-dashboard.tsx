@@ -46,8 +46,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Login } from "./login"
-import { Signup } from "./signup"
+import { Login } from "@/app/login/login"
+import { Signup } from "@/app/signup/signup"
 
 interface ShortenedUrl {
   id: string

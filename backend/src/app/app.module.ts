@@ -7,7 +7,7 @@ import { ResponseNormalizerModule } from "@/app/http-api/response-normalizer/res
 
 import { LoggerModule } from "@/shared/logger/infrastructure/logger.module";
 
-import { YourContextModule } from "@/contexts/your-context/infrastructure/your-context.module";
+import { UrlsModule } from "@/contexts/urls/infrastructure/urls.module";
 
 @Module({
   imports: [
@@ -16,7 +16,7 @@ import { YourContextModule } from "@/contexts/your-context/infrastructure/your-c
     HealthModule,
     ResponseNormalizerModule,
     DatabaseModule,
-    YourContextModule,
+    UrlsModule,
   ],
 })
 export class AppModule {}
