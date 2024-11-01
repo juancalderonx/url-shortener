@@ -45,4 +45,33 @@ export class PrismaUrlRepository extends UrlRepository {
       expiresAt: url.expiresAt,
     });
   }
+
+  async findAll(paginationDto: {
+    page: number;
+    limit: number;
+  }): Promise<Url[] | null> {
+    const { page, limit } = paginationDto;
+    const ONE = 1;
+
+    try {
+      const urls = await this.prisma.url.findMany({
+        skip: (page - ONE) * limit,
+        take: limit,
+      });
+
+      return urls.map(url => {
+        return new Url({
+          id: url.id,
+          originalUrl: url.originalUrl,
+          shortUrl: url.shortUrl,
+          userId: url.userId,
+          createdAt: url.createdAt,
+          updatedAt: url.updatedAt,
+          expiresAt: url.expiresAt,
+        });
+      });
+    } catch {
+      return null;
+    }
+  }
 }
